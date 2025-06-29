@@ -11,7 +11,8 @@ function EditTaskForm({ fetchData, task, setEditing }) {
 		if (!newTask.description.trim()) return;
 
 		await updateTask(newTask);
-
+		setEditing(false);
+		fetchData();
 		// let { data } = await updateTask(newTask);
 		// console.log(data);
 	};

@@ -31,7 +31,11 @@ function TaskItem({ task, fetchData }) {
 			<Card style={{ marginBottom: "5px" }}>
 				<CardContent>
 					{editing ? (
-						<EditTaskForm task={task} setEditing={setEditing} />
+						<EditTaskForm
+							task={task}
+							setEditing={setEditing}
+							fetchData={fetchData}
+						/>
 					) : (
 						<>
 							<Typography
